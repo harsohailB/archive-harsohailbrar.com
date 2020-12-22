@@ -19,9 +19,8 @@ const PageReferences = styled.div`
   display: flex;
   position: absolute;
   justify-content: center;
-  left: 50%;
-  width: 500px;
-  margin-left: -250px;
+  width: 100%;
+  text-align: center;
 `;
 
 const Reference = styled(Link)`

@@ -35,6 +35,10 @@ const Title = styled.h1`
   font-size: 40px;
   color: #000000;
   margin: 0px !important;
+
+  @media (max-width: 768px) {
+    font-size: 34px;
+  }
 `;
 
 const Description = styled.p`
@@ -47,6 +51,10 @@ const LinksWrapper = styled.div`
   align-items: center;
   justify-content: center;
   padding-bottom: calc(7vh + 20px);
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 const ButtonLink = styled.a<ButtonProps>`

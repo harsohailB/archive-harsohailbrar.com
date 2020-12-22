@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import { FaLinkedinIn, FaGithub } from "react-icons/fa";
+import { FaLinkedinIn, FaGithub, FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 import personalLogo from "../assets/personalLogo.png";
+import MobileNavSlider from "./MobileNavSlider";
 
 const Wrapper = styled.div`
   position: absolute;
@@ -21,6 +22,10 @@ const PageReferences = styled.div`
   justify-content: center;
   width: 100%;
   text-align: center;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const Reference = styled(Link)`
@@ -47,6 +52,10 @@ const ExtReference = styled.a`
   font-weight: bold;
   text-decoration: none;
   color: black;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const SocialLinks = styled.div`
@@ -54,7 +63,24 @@ const SocialLinks = styled.div`
   margin-right: 16px;
 `;
 
+const MenuIcon = styled.div`
+  font-size: 14px;
+  margin-right: 20px;
+  color: black;
+  display: none;
+
+  @media (max-width: 768px) {
+    display: flex;
+  }
+`;
+
 function Navbar() {
+  const [mobileMenuToggled, setMobileMenuToggled] = useState(false);
+
+  const handleMobileMenuClick = () => {
+    setMobileMenuToggled(!mobileMenuToggled);
+  };
+
   return (
     <Wrapper>
       <Reference to="/">
@@ -67,7 +93,6 @@ function Navbar() {
         <ExtReference href="https://drive.google.com/file/d/1bZgMkuhOrdOzewz5KXq2O6mZzxCC1hLO/view?usp=sharing">
           Resume
         </ExtReference>
-        {/* <Reference to="/about">About</Reference> */}
       </PageReferences>
 
       <SocialLinks>
@@ -79,6 +104,14 @@ function Navbar() {
           <FaGithub />
         </ExtReference>
       </SocialLinks>
+
+      <MenuIcon onClick={handleMobileMenuClick}>
+        <FaBars />
+      </MenuIcon>
+
+      {mobileMenuToggled && (
+        <MobileNavSlider setMobileMenuToggled={setMobileMenuToggled} />
+      )}
     </Wrapper>
   );
 }

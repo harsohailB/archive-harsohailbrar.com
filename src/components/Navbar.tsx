@@ -68,7 +68,7 @@ function Navbar() {
         <ExtReference href="https://drive.google.com/file/d/1bZgMkuhOrdOzewz5KXq2O6mZzxCC1hLO/view?usp=sharing">
           Resume
         </ExtReference>
-        <Reference to="/about">About</Reference>
+        {/* <Reference to="/about">About</Reference> */}
       </PageReferences>
 
       <SocialLinks>

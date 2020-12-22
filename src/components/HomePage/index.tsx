@@ -16,7 +16,7 @@ const Wrapper = styled.div`
 const InfoWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  padding-right: 30vh;
+  padding-right: 10%;
 `;
 
 const Title = styled.h1`
@@ -35,7 +35,7 @@ function HomePage() {
     <Wrapper>
       <InfoWrapper>
         <Title>Hi, I am Harsohail Brar 👋</Title>
-        {/* <Description>How are you?</Description> */}
+        <Description>Passionate about Software Development</Description>
       </InfoWrapper>
     </Wrapper>
   );

@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { FaLinkedinIn, FaGithub, FaBars } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import personalLogo from "../assets/personalLogo.png";
 import MobileNavSlider from "./MobileNavSlider";
@@ -42,7 +42,6 @@ const Reference = styled(Link)`
 `;
 
 const ExtReference = styled.a`
-  cursor: pointer;
   line-height: 1.25;
   text-transform: uppercase;
   font-size: 14px;
@@ -52,6 +51,10 @@ const ExtReference = styled.a`
   font-weight: bold;
   text-decoration: none;
   color: black;
+
+  &:hover {
+    cursor: pointer;
+  }
 
   @media (max-width: 768px) {
     display: none;
@@ -75,6 +78,9 @@ const MenuIcon = styled.div`
 `;
 
 function Navbar() {
+  const resumeLink =
+    "https://drive.google.com/file/d/1bZgMkuhOrdOzewz5KXq2O6mZzxCC1hLO/view?usp=sharing";
+
   const [mobileMenuToggled, setMobileMenuToggled] = useState(false);
 
   const handleMobileMenuClick = () => {
@@ -89,12 +95,10 @@ function Navbar() {
 
       <PageReferences>
         <Reference to="/">Home</Reference>
-        <Reference to="/education">Education</Reference>
-        <Reference to="/experience">Experience</Reference>
         <Reference to="/projects">Projects</Reference>
-        <ExtReference href="https://drive.google.com/file/d/1bZgMkuhOrdOzewz5KXq2O6mZzxCC1hLO/view?usp=sharing">
-          Resume
-        </ExtReference>
+        <Reference to="/experience">Experience</Reference>
+        <Reference to="/education">Education</Reference>
+        <ExtReference href={resumeLink}>Resume</ExtReference>
       </PageReferences>
 
       <SocialLinks>

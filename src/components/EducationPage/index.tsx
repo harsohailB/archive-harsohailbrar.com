@@ -1,32 +1,40 @@
 import React from "react";
 import styled from "styled-components";
+import ScrollArticle from "../styled/ScrollArticle";
 import Education from "./Education";
 
+type Degree = {
+  school: string;
+  degree: string;
+};
+
 export type EducationInfo = {
-  title: string;
-  description: string;
+  university: string;
+  degrees: Degree[];
   backgroundImageLink: string;
 };
 
-const Wrapper = styled.article`
-  min-height: 100vh;
-  height: 100vh;
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-`;
-
 const EducationPage = () => {
   const engineeringInfo: EducationInfo = {
-    title: "Schulich School of Engineering",
-    description: "Software Engineering",
+    university: "University of Calgary",
+    degrees: [
+      {
+        school: "Schulich School of Engineering",
+        degree: "Software Engineering",
+      },
+      {
+        school: "Haskayne School of Business",
+        degree: "Commerce",
+      },
+    ],
     backgroundImageLink:
-      "https://schulich.ucalgary.ca/sites/default/files/2020-10/ENG%20Fourth%20Floor.jpg",
+      "https://www.macleans.ca/wp-content/uploads/2019/04/University-of-Calgary-Insider-Report.jpg",
   };
 
   return (
-    <Wrapper>
+    <ScrollArticle>
       <Education {...engineeringInfo} />
-    </Wrapper>
+    </ScrollArticle>
   );
 };
 

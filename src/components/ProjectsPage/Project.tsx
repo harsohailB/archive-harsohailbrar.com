@@ -2,16 +2,13 @@ import React from "react";
 import styled from "styled-components";
 
 import SlideWrapper from "../styled/SlideWrapper";
+import ScrollSection from "../styled/ScrollSection";
 import { ProjectInfo } from ".";
 
 interface ButtonProps {
   backgroundColor: string;
   color: string;
 }
-
-const ScrollSection = styled.section`
-  scroll-snap-align: start;
-`;
 
 const ProjectInfoWrapper = styled.div`
   padding-top: calc(7vh + 20px);

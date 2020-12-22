@@ -85,14 +85,14 @@ const MobileNavSlider = (props: MobileNavSliderProps) => {
         <Reference to="/" onClick={closeMobileMenu}>
           Home
         </Reference>
-        <Reference to="/education" onClick={closeMobileMenu}>
-          Education
+        <Reference to="/projects" onClick={closeMobileMenu}>
+          Projects
         </Reference>
         <Reference to="/experience" onClick={closeMobileMenu}>
           Experience
         </Reference>
-        <Reference to="/projects" onClick={closeMobileMenu}>
-          Projects
+        <Reference to="/education" onClick={closeMobileMenu}>
+          Education
         </Reference>
         <Reference to="/" onClick={closeMobileMenu}>
           Resume

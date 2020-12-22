@@ -1,13 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Project from "./Project";
-
-const Wrapper = styled.article`
-  min-height: 100vh;
-  height: 100vh;
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-`;
+import ScrollArticle from "../styled/ScrollArticle";
 
 export type ProjectInfo = {
   title: string;
@@ -48,11 +42,11 @@ function ProjectsPage() {
   };
 
   return (
-    <Wrapper>
+    <ScrollArticle>
       <Project {...jamboInfo} />
       <Project {...tlreadrInfo} />
       <Project {...dentistryInfo} />
-    </Wrapper>
+    </ScrollArticle>
   );
 }
 

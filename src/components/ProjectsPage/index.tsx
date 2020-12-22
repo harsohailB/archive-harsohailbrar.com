@@ -13,8 +13,8 @@ export type ProjectInfo = {
   title: string;
   description: string;
   backgroundImageLink: string;
-  githubLink: string;
-  liveDemoLink: string;
+  githubLink: string | null;
+  liveDemoLink: string | null;
 };
 
 function ProjectsPage() {
@@ -38,10 +38,20 @@ function ProjectsPage() {
     liveDemoLink: "http://tlreadr.com/",
   };
 
+  const dentistryInfo: ProjectInfo = {
+    title: "Shaganappi Dentistry",
+    description: "A local dentistry business' website",
+    backgroundImageLink:
+      "https://static.wixstatic.com/media/58f522_c36868948834473b96c45d22d7da015d~mv2_d_5855_3893_s_4_2.jpg/v1/fill/w_3358,h_1496,al_c,q_90,usm_0.66_1.00_0.01/58f522_c36868948834473b96c45d22d7da015d~mv2_d_5855_3893_s_4_2.webp",
+    githubLink: null,
+    liveDemoLink: "https://www.shaganappidentistry.ca/",
+  };
+
   return (
     <Wrapper>
       <Project {...jamboInfo} />
       <Project {...tlreadrInfo} />
+      <Project {...dentistryInfo} />
     </Wrapper>
   );
 }

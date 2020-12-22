@@ -1,10 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { ProjectInfo } from ".";
 
-interface WrapperProps {
-  backgroundImageLink: string;
-}
+import SlideWrapper from "../styled/SlideWrapper";
+import { ProjectInfo } from ".";
 
 interface ButtonProps {
   backgroundColor: string;
@@ -13,18 +11,6 @@ interface ButtonProps {
 
 const ScrollSection = styled.section`
   scroll-snap-align: start;
-`;
-
-const Wrapper = styled.div<WrapperProps>`
-  background-image: url(${(props) => props.backgroundImageLink});
-  min-height: 100vh;
-  height: 100vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  justify-content: space-between;
-  display: flex;
-  flex-direction: column;
 `;
 
 const ProjectInfoWrapper = styled.div`
@@ -76,29 +62,34 @@ const ButtonLink = styled.a<ButtonProps>`
 const Project = (projectInfo: ProjectInfo) => {
   return (
     <ScrollSection>
-      <Wrapper backgroundImageLink={projectInfo.backgroundImageLink}>
+      <SlideWrapper backgroundImageLink={projectInfo.backgroundImageLink}>
         <ProjectInfoWrapper>
           <Title>{projectInfo.title}</Title>
           <Description>{projectInfo.description}</Description>
         </ProjectInfoWrapper>
 
         <LinksWrapper>
-          <ButtonLink
-            href={projectInfo.liveDemoLink}
-            backgroundColor="#171a20"
-            color="white"
-          >
-            Live Demo
-          </ButtonLink>
-          <ButtonLink
-            href={projectInfo.githubLink}
-            backgroundColor="white"
-            color="black"
-          >
-            GitHub
-          </ButtonLink>
+          {projectInfo.liveDemoLink && (
+            <ButtonLink
+              href={projectInfo.liveDemoLink}
+              backgroundColor="#171a20"
+              color="white"
+            >
+              Live Demo
+            </ButtonLink>
+          )}
+
+          {projectInfo.githubLink && (
+            <ButtonLink
+              href={projectInfo.githubLink ? projectInfo.githubLink : ""}
+              backgroundColor="white"
+              color="black"
+            >
+              GitHub
+            </ButtonLink>
+          )}
         </LinksWrapper>
-      </Wrapper>
+      </SlideWrapper>
     </ScrollSection>
   );
 };

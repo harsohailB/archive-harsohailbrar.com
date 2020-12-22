@@ -15,6 +15,7 @@ const Wrapper = styled.div`
   right: 0;
   top: 0;
   background-color: white;
+  z-index: 10;
 
   @media (min-width: 768px) {
     display: none;
@@ -83,6 +84,12 @@ const MobileNavSlider = (props: MobileNavSliderProps) => {
       <ReferenceWrapper>
         <Reference to="/" onClick={closeMobileMenu}>
           Home
+        </Reference>
+        <Reference to="/education" onClick={closeMobileMenu}>
+          Education
+        </Reference>
+        <Reference to="/experience" onClick={closeMobileMenu}>
+          Experience
         </Reference>
         <Reference to="/projects" onClick={closeMobileMenu}>
           Projects

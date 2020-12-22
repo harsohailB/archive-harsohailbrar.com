@@ -89,6 +89,8 @@ function Navbar() {
 
       <PageReferences>
         <Reference to="/">Home</Reference>
+        <Reference to="/education">Education</Reference>
+        <Reference to="/experience">Experience</Reference>
         <Reference to="/projects">Projects</Reference>
         <ExtReference href="https://drive.google.com/file/d/1bZgMkuhOrdOzewz5KXq2O6mZzxCC1hLO/view?usp=sharing">
           Resume

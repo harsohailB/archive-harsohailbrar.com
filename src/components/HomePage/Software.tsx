@@ -88,7 +88,7 @@ const Software = () => {
 
   const frontEnd: SoftwareColumnProps = {
     title: "Front End",
-    entries: ["ReactJS", "ReactTS", "Redux", "jQuery", "AJAX"],
+    entries: ["React", "Redux", "jQuery", "AJAX"],
   };
 
   const backEnd: SoftwareColumnProps = {

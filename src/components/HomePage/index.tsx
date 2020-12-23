@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import styled from "styled-components";
 import Button from "../styled/Button";
 import SlideWrapper from "../styled/SlideWrapper";
@@ -19,7 +19,7 @@ const ScrollSection = styled.section`
 const InfoWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
   padding-top: 15%;
   width: 100%;
   height: 100vh;
@@ -30,24 +30,11 @@ const InfoWrapper = styled.div`
   }
 `;
 
-const Title = styled.h1`
-  font-size: 40px;
-  color: #000000;
-  margin: 0px !important;
-  text-align: left;
-  padding-left: 10%;
-
-  @media (max-width: 768px) {
-    font-size: 30px;
-    text-align: center;
-  }
-`;
-
 const ButtonsWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-bottom: calc(2vh + 20px);
+  padding-bottom: calc(2vh);
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -58,15 +45,26 @@ const ButtonsWrapper = styled.div`
 function HomePage() {
   const myPictureLink = "https://i.imgur.com/SuubF4e.jpg";
 
+  const infoSectionRef = useRef(document.createElement("div"));
+
+  const scrollToInformationSection = () => {
+    infoSectionRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <ScrollArticle>
       <ScrollSection>
         <SlideWrapper backgroundImageLink={myPictureLink}>
           <InfoWrapper>
-            <Title>Hi, I am Harsohail Brar 👋</Title>
-
-            <div>
+            <div style={{ paddingBottom: "4vh" }}>
               <ButtonsWrapper>
+                <Button
+                  backgroundColor="#171a20"
+                  color="white"
+                  onClick={scrollToInformationSection}
+                >
+                  Learn More
+                </Button>
                 <Button href="/projects" backgroundColor="white" color="black">
                   View Projects
                 </Button>
@@ -78,7 +76,7 @@ function HomePage() {
         </SlideWrapper>
       </ScrollSection>
 
-      <ScrollSection>
+      <ScrollSection ref={infoSectionRef}>
         <InformationSection />
       </ScrollSection>
     </ScrollArticle>

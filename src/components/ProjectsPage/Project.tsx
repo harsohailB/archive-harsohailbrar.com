@@ -52,7 +52,7 @@ const Project = (props: ProjectProps) => {
           <Description>{props.projectInfo.description}</Description>
         </ProjectInfoWrapper>
 
-        <div>
+        <div style={{ paddingBottom: "4vh" }}>
           <ButtonsWrapper>
             {props.projectInfo.liveDemoLink && (
               <Button

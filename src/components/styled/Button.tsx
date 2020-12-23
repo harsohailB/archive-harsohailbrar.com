@@ -18,6 +18,10 @@ const Button = styled.a<ButtonProps>`
   text-transform: uppercase;
   font-size: 12px;
   font-weight: 600;
+
+  &: hover {
+    cursor: pointer;
+  }
 `;
 
 export default Button;

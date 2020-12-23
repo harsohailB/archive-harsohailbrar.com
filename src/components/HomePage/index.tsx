@@ -44,7 +44,7 @@ const ButtonsWrapper = styled.div`
 `;
 
 function HomePage() {
-  const myPictureLink = "https://i.imgur.com/BaPRdW2.jpg";
+  const myPictureLink = "https://i.imgur.com/GsypImZ.jpg";
 
   const infoSectionRef = useRef(document.createElement("div"));
 

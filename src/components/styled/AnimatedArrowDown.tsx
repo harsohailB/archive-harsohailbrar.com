@@ -17,6 +17,10 @@ const Wrapper = styled.div`
       transform: translate(0px, 20px);
     }
   }
+
+  @media (max-width: 768px) {
+    padding-bottom: calc(8vh + 20px);
+  }
 `;
 
 const AnimatedArrowDown = () => {

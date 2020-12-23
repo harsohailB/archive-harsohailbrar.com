@@ -51,7 +51,7 @@ const ButtonsWrapper = styled.div`
 
   @media (max-width: 768px) {
     flex-direction: column;
-    padding-bottom: calc(8vh + 20px);
+    padding-bottom: 0;
   }
 `;
 

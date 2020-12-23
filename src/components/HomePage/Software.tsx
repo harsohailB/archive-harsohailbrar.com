@@ -111,7 +111,6 @@ const Software = () => {
       <Image src={softwareSVG}></Image>
 
       <ColumnWrapper>
-        <Quote>Passionate about full stack development!</Quote>
         <RowWrapper>
           <SoftwareColumn {...languages} />
           <SoftwareColumn {...frontEnd} />

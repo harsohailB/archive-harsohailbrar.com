@@ -46,6 +46,19 @@ const Reference = styled(Link)`
   text-align: left;
 `;
 
+const EReference = styled.a`
+  color: #393c41;
+  font-size: 12px;
+  padding: 20px calc(20px / 2);
+  max-width: 272px;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #bbb;
+  text-decoration: none;
+  text-align: left;
+`;
+
 const ExtReference = styled.a`
   cursor: pointer;
   line-height: 1.25;
@@ -67,6 +80,9 @@ const SocialLinks = styled.div`
 `;
 
 const MobileNavSlider = (props: MobileNavSliderProps) => {
+  const resumeLink =
+    "https://drive.google.com/file/d/1bZgMkuhOrdOzewz5KXq2O6mZzxCC1hLO/view?usp=sharing";
+
   const closeMobileMenu = () => {
     props.setMobileMenuToggled(false);
   };
@@ -94,9 +110,9 @@ const MobileNavSlider = (props: MobileNavSliderProps) => {
         <Reference to="/education" onClick={closeMobileMenu}>
           Education
         </Reference> */}
-        <Reference to="/" onClick={closeMobileMenu}>
+        <EReference href={resumeLink} onClick={closeMobileMenu}>
           Resume
-        </Reference>
+        </EReference>
       </ReferenceWrapper>
 
       <SocialLinks>

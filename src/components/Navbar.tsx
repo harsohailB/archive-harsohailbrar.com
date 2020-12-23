@@ -96,8 +96,8 @@ function Navbar() {
       <PageReferences>
         <Reference to="/">Home</Reference>
         <Reference to="/projects">Projects</Reference>
-        <Reference to="/experience">Experience</Reference>
-        <Reference to="/education">Education</Reference>
+        {/* <Reference to="/experience">Experience</Reference>
+        <Reference to="/education">Education</Reference> */}
         <ExtReference href={resumeLink}>Resume</ExtReference>
       </PageReferences>
 

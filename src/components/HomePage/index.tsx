@@ -1,6 +1,9 @@
 import React from "react";
 import styled from "styled-components";
+import Button from "../styled/Button";
 import SlideWrapper from "../styled/SlideWrapper";
+import AnimatedArrowDown from "../styled/AnimatedArrowDown";
+import InformationSection from "./InformationSection";
 
 const ScrollArticle = styled.article`
   min-height: 100vh;
@@ -16,9 +19,10 @@ const ScrollSection = styled.section`
 const InfoWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   padding-top: 15%;
-  padding-left: 10%;
   width: 100%;
+  height: 100vh;
 
   @media (max-width: 768px) {
     padding-top: 25%;
@@ -31,6 +35,7 @@ const Title = styled.h1`
   color: #000000;
   margin: 0px !important;
   text-align: left;
+  padding-left: 10%;
 
   @media (max-width: 768px) {
     font-size: 30px;
@@ -38,13 +43,15 @@ const Title = styled.h1`
   }
 `;
 
-const Description = styled.p`
-  font-size: 14px;
-  color: #000000;
-  text-align: left;
+const ButtonsWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: calc(2vh + 20px);
 
   @media (max-width: 768px) {
-    text-align: center;
+    flex-direction: column;
+    padding-bottom: calc(8vh + 20px);
   }
 `;
 
@@ -57,9 +64,22 @@ function HomePage() {
         <SlideWrapper backgroundImageLink={myPictureLink}>
           <InfoWrapper>
             <Title>Hi, I am Harsohail Brar 👋</Title>
-            {/* <Description>Passionate about Software Development</Description> */}
+
+            <div>
+              <ButtonsWrapper>
+                <Button href="/projects" backgroundColor="white" color="black">
+                  View Projects
+                </Button>
+              </ButtonsWrapper>
+
+              <AnimatedArrowDown />
+            </div>
           </InfoWrapper>
         </SlideWrapper>
+      </ScrollSection>
+
+      <ScrollSection>
+        <InformationSection />
       </ScrollSection>
     </ScrollArticle>
   );

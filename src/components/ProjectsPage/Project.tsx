@@ -3,12 +3,9 @@ import styled from "styled-components";
 
 import SlideWrapper from "../styled/SlideWrapper";
 import ScrollSection from "../styled/ScrollSection";
+import Button from "../styled/Button";
 import { ProjectInfo } from ".";
-
-interface ButtonProps {
-  backgroundColor: string;
-  color: string;
-}
+import AnimatedArrowDown from "../styled/AnimatedArrowDown";
 
 const ProjectInfoWrapper = styled.div`
   padding-top: calc(7vh + 20px);
@@ -29,63 +26,61 @@ const Description = styled.p`
   color: #000000;
 `;
 
-const LinksWrapper = styled.div`
+const ButtonsWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-bottom: calc(7vh + 20px);
+  padding-bottom: calc(2vh + 20px);
 
   @media (max-width: 768px) {
     flex-direction: column;
-    padding-bottom: calc(12vh + 20px);
+    padding-bottom: calc(8vh + 20px);
   }
 `;
 
-const ButtonLink = styled.a<ButtonProps>`
-  text-decoration: none;
-  margin: 8px;
-  padding: 12px 40px;
-  color: ${(props) => props.color};
-  background-color: ${(props) => props.backgroundColor};
-  opacity: ${(props) => (props.backgroundColor === "#171a20" ? "0.85" : "1")};
-  border-radius: 20px;
-  min-width: 175px;
-  width: 175px;
-  text-transform: uppercase;
-  font-size: 12px;
-  font-weight: 600;
-`;
+interface ProjectProps {
+  projectInfo: ProjectInfo;
+  animated: boolean;
+}
 
-const Project = (projectInfo: ProjectInfo) => {
+const Project = (props: ProjectProps) => {
   return (
     <ScrollSection>
-      <SlideWrapper backgroundImageLink={projectInfo.backgroundImageLink}>
+      <SlideWrapper backgroundImageLink={props.projectInfo.backgroundImageLink}>
         <ProjectInfoWrapper>
-          <Title>{projectInfo.title}</Title>
-          <Description>{projectInfo.description}</Description>
+          <Title>{props.projectInfo.title}</Title>
+          <Description>{props.projectInfo.description}</Description>
         </ProjectInfoWrapper>
 
-        <LinksWrapper>
-          {projectInfo.liveDemoLink && (
-            <ButtonLink
-              href={projectInfo.liveDemoLink}
-              backgroundColor="#171a20"
-              color="white"
-            >
-              Live Demo
-            </ButtonLink>
-          )}
+        <div>
+          <ButtonsWrapper>
+            {props.projectInfo.liveDemoLink && (
+              <Button
+                href={props.projectInfo.liveDemoLink}
+                backgroundColor="#171a20"
+                color="white"
+              >
+                Live Demo
+              </Button>
+            )}
 
-          {projectInfo.githubLink && (
-            <ButtonLink
-              href={projectInfo.githubLink ? projectInfo.githubLink : ""}
-              backgroundColor="white"
-              color="black"
-            >
-              GitHub
-            </ButtonLink>
-          )}
-        </LinksWrapper>
+            {props.projectInfo.githubLink && (
+              <Button
+                href={
+                  props.projectInfo.githubLink
+                    ? props.projectInfo.githubLink
+                    : ""
+                }
+                backgroundColor="white"
+                color="black"
+              >
+                GitHub
+              </Button>
+            )}
+          </ButtonsWrapper>
+
+          {props.animated && <AnimatedArrowDown />}
+        </div>
       </SlideWrapper>
     </ScrollSection>
   );

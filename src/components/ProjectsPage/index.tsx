@@ -43,9 +43,9 @@ function ProjectsPage() {
 
   return (
     <ScrollArticle>
-      <Project {...jamboInfo} />
-      <Project {...tlreadrInfo} />
-      <Project {...dentistryInfo} />
+      <Project animated projectInfo={jamboInfo} />
+      <Project animated projectInfo={tlreadrInfo} />
+      <Project animated={false} projectInfo={dentistryInfo} />
     </ScrollArticle>
   );
 }

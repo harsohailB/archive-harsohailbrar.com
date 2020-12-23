@@ -20,7 +20,8 @@ const PageReferences = styled.div`
   display: flex;
   position: absolute;
   justify-content: center;
-  width: 100%;
+  left: 10%;
+  width: 80%;
   text-align: center;
 
   @media (max-width: 768px) {
@@ -96,8 +97,6 @@ function Navbar() {
       <PageReferences>
         <Reference to="/">Home</Reference>
         <Reference to="/projects">Projects</Reference>
-        {/* <Reference to="/experience">Experience</Reference>
-        <Reference to="/education">Education</Reference> */}
         <ExtReference href={resumeLink}>Resume</ExtReference>
       </PageReferences>
 

@@ -79,7 +79,7 @@ const Project = (props: ProjectProps) => {
             )}
           </ButtonsWrapper>
 
-          {props.animated && <AnimatedArrowDown />}
+          <AnimatedArrowDown animated={props.animated} />
         </div>
       </SlideWrapper>
     </ScrollSection>

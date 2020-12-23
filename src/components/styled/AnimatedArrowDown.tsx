@@ -23,12 +23,8 @@ const Wrapper = styled.div`
   }
 `;
 
-const AnimatedArrowDown = () => {
-  return (
-    <Wrapper>
-      <FaAngleDown />
-    </Wrapper>
-  );
+const AnimatedArrowDown = (props: { animated: boolean }) => {
+  return <Wrapper>{props.animated && <FaAngleDown />}</Wrapper>;
 };
 
 export default AnimatedArrowDown;

@@ -72,7 +72,7 @@ function HomePage() {
                 </Button>
               </ButtonsWrapper>
 
-              <AnimatedArrowDown />
+              <AnimatedArrowDown animated />
             </div>
           </InfoWrapper>
         </SlideWrapper>

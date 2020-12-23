@@ -4,6 +4,7 @@ import Button from "../styled/Button";
 import SlideWrapper from "../styled/SlideWrapper";
 import AnimatedArrowDown from "../styled/AnimatedArrowDown";
 import InformationSection from "./InformationSection";
+import Software from "./Software";
 
 const ScrollArticle = styled.article`
   min-height: 100vh;
@@ -76,7 +77,8 @@ function HomePage() {
         </SlideWrapper>
       </ScrollSection>
 
-      <ScrollSection ref={infoSectionRef}>
+      <ScrollSection ref={infoSectionRef} style={{ height: "100vh" }}>
+        <Software />
         <InformationSection />
       </ScrollSection>
     </ScrollArticle>

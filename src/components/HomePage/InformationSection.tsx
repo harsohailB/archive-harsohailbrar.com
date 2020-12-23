@@ -10,12 +10,16 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+
+  @media (max-width: 768px) {
+    margin-top: 20px;
+  }
 `;
 
 const SubSection = styled.div`
   display: flex;
   align-items: center;
-  margin: 30px;
+  margin: 20px;
 
   @media (max-width: 768px) {
     margin: 10px;
@@ -82,7 +86,6 @@ const InformationSection = () => {
         justifyContent: "center",
         flexDirection: "column",
         alignItems: "center",
-        height: "100vh",
       }}
     >
       <Wrapper>

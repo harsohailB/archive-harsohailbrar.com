@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Slide from "react-reveal/Slide";
 
 const Wrapper = styled.div`
   display: flex;
@@ -66,12 +67,16 @@ export interface SoftwareColumnProps {
 const SoftwareColumn = (props: SoftwareColumnProps) => {
   return (
     <Wrapper>
-      <Header>{props.title}</Header>
-      <Body>
-        {props.entries.map((entry) => (
-          <Text>{entry}</Text>
-        ))}
-      </Body>
+      <Slide top>
+        <Header>{props.title}</Header>
+      </Slide>
+      <Slide bottom>
+        <Body>
+          {props.entries.map((entry) => (
+            <Text>{entry}</Text>
+          ))}
+        </Body>
+      </Slide>
     </Wrapper>
   );
 };

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Slide from "react-reveal/Slide";
 
 const Wrapper = styled.div`
   display: flex;
@@ -64,15 +65,17 @@ export interface InformationTileProps {
 
 const InformationTile = (props: InformationTileProps) => {
   return (
-    <Wrapper>
-      <Logo src={props.logo}></Logo>
+    <Slide bottom>
+      <Wrapper>
+        <Logo src={props.logo}></Logo>
 
-      <InfoWrapper>
-        <Title>{props.title}</Title>
-        <Subtitle>{props.subtitle}</Subtitle>
-        <Timeline>{props.timeline}</Timeline>
-      </InfoWrapper>
-    </Wrapper>
+        <InfoWrapper>
+          <Title>{props.title}</Title>
+          <Subtitle>{props.subtitle}</Subtitle>
+          <Timeline>{props.timeline}</Timeline>
+        </InfoWrapper>
+      </Wrapper>
+    </Slide>
   );
 };
 

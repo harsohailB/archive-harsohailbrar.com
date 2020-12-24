@@ -1,9 +1,11 @@
 import React from "react";
+import Slide from "react-reveal/Slide";
 import { FaGithub, FaLinkedin, FaLinkedinIn, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 interface MobileNavSliderProps {
+  mobileMenuToggled: boolean;
   setMobileMenuToggled: any;
 }
 
@@ -97,33 +99,35 @@ const MobileNavSlider = (props: MobileNavSliderProps) => {
         />
       </IconWrapper>
 
-      <ReferenceWrapper>
-        <Reference to="/" onClick={closeMobileMenu}>
-          Home
-        </Reference>
-        <Reference to="/projects" onClick={closeMobileMenu}>
-          Projects
-        </Reference>
-        {/* <Reference to="/experience" onClick={closeMobileMenu}>
+      <Slide right>
+        <ReferenceWrapper>
+          <Reference to="/" onClick={closeMobileMenu}>
+            Home
+          </Reference>
+          <Reference to="/projects" onClick={closeMobileMenu}>
+            Projects
+          </Reference>
+          {/* <Reference to="/experience" onClick={closeMobileMenu}>
           Experience
         </Reference>
         <Reference to="/education" onClick={closeMobileMenu}>
           Education
         </Reference> */}
-        <EReference href={resumeLink} onClick={closeMobileMenu}>
-          Resume
-        </EReference>
-      </ReferenceWrapper>
+          <EReference href={resumeLink} onClick={closeMobileMenu}>
+            Resume
+          </EReference>
+        </ReferenceWrapper>
 
-      <SocialLinks>
-        <ExtReference href="https://www.linkedin.com/in/harsohailbrar/">
-          <FaLinkedinIn />
-        </ExtReference>
+        <SocialLinks>
+          <ExtReference href="https://www.linkedin.com/in/harsohailbrar/">
+            <FaLinkedinIn />
+          </ExtReference>
 
-        <ExtReference href="https://github.com/harsohailB">
-          <FaGithub />
-        </ExtReference>
-      </SocialLinks>
+          <ExtReference href="https://github.com/harsohailB">
+            <FaGithub />
+          </ExtReference>
+        </SocialLinks>
+      </Slide>
     </Wrapper>
   );
 };

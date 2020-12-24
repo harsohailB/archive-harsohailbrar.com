@@ -48,25 +48,13 @@ const RowWrapper = styled.div`
   }
 `;
 
-const Quote = styled.h1`
-  margin: 0px !important;
-  font-size: 40px;
-  color: #3f3d56;
-  width: 100%;
-  text-align: center;
-
-  @media (max-width: 768px) {
-    font-size: 20px;
-  }
-`;
-
 const Image = styled.img`
   width: 33vw;
   height: auto;
 
   @media (max-width: 768px) {
-    width: 60%;
-    display: none;
+    padding-top: 5%;
+    width: 75%;
   }
 `;
 

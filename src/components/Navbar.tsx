@@ -115,7 +115,10 @@ function Navbar() {
       </MenuIcon>
 
       {mobileMenuToggled && (
-        <MobileNavSlider setMobileMenuToggled={setMobileMenuToggled} />
+        <MobileNavSlider
+          mobileMenuToggled={mobileMenuToggled}
+          setMobileMenuToggled={setMobileMenuToggled}
+        />
       )}
     </Wrapper>
   );

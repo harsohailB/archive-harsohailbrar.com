@@ -1,5 +1,7 @@
 import React, { useRef } from "react";
 import styled from "styled-components";
+import Slide from "react-reveal/Slide";
+
 import Button from "../styled/Button";
 import SlideWrapper from "../styled/SlideWrapper";
 import AnimatedArrowDown from "../styled/AnimatedArrowDown";
@@ -58,18 +60,24 @@ function HomePage() {
         <SlideWrapper backgroundImageLink={myPictureLink}>
           <InfoWrapper>
             <div style={{ paddingBottom: "4vh" }}>
-              <ButtonsWrapper>
-                <Button
-                  backgroundColor="#171a20"
-                  color="white"
-                  onClick={scrollToInformationSection}
-                >
-                  Learn More
-                </Button>
-                <Button href="/projects" backgroundColor="white" color="black">
-                  View Projects
-                </Button>
-              </ButtonsWrapper>
+              <Slide bottom>
+                <ButtonsWrapper>
+                  <Button
+                    backgroundColor="#171a20"
+                    color="white"
+                    onClick={scrollToInformationSection}
+                  >
+                    Learn More
+                  </Button>
+                  <Button
+                    href="/projects"
+                    backgroundColor="white"
+                    color="black"
+                  >
+                    View Projects
+                  </Button>
+                </ButtonsWrapper>
+              </Slide>
 
               <AnimatedArrowDown animated />
             </div>

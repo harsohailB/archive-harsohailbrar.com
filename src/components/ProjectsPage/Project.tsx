@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Slide from "react-reveal/Slide";
 
 import SlideWrapper from "../styled/SlideWrapper";
 import ScrollSection from "../styled/ScrollSection";
@@ -53,31 +54,33 @@ const Project = (props: ProjectProps) => {
         </ProjectInfoWrapper>
 
         <div style={{ paddingBottom: "4vh" }}>
-          <ButtonsWrapper>
-            {props.projectInfo.liveDemoLink && (
-              <Button
-                href={props.projectInfo.liveDemoLink}
-                backgroundColor="#171a20"
-                color="white"
-              >
-                Live Demo
-              </Button>
-            )}
+          <Slide bottom>
+            <ButtonsWrapper>
+              {props.projectInfo.liveDemoLink && (
+                <Button
+                  href={props.projectInfo.liveDemoLink}
+                  backgroundColor="#171a20"
+                  color="white"
+                >
+                  Live Demo
+                </Button>
+              )}
 
-            {props.projectInfo.githubLink && (
-              <Button
-                href={
-                  props.projectInfo.githubLink
-                    ? props.projectInfo.githubLink
-                    : ""
-                }
-                backgroundColor="white"
-                color="black"
-              >
-                GitHub
-              </Button>
-            )}
-          </ButtonsWrapper>
+              {props.projectInfo.githubLink && (
+                <Button
+                  href={
+                    props.projectInfo.githubLink
+                      ? props.projectInfo.githubLink
+                      : ""
+                  }
+                  backgroundColor="white"
+                  color="black"
+                >
+                  GitHub
+                </Button>
+              )}
+            </ButtonsWrapper>
+          </Slide>
 
           <AnimatedArrowDown animated={props.animated} />
         </div>

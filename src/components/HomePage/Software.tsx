@@ -31,6 +31,7 @@ const ColumnWrapper = styled.div`
   @media (max-width: 768px) {
     width: 100%;
     align-items: flex-start;
+    padding-top: 5px;
   }
 `;
 
@@ -54,7 +55,7 @@ const Image = styled.img`
 
   @media (max-width: 768px) {
     padding-top: 5%;
-    width: 75%;
+    width: 40%;
   }
 `;
 

@@ -14,6 +14,7 @@ const Wrapper = styled.div`
 
   @media (max-width: 1300px) {
     flex-direction: column;
+    margin: -20px;
   }
 `;
 
@@ -23,7 +24,7 @@ const SubSection = styled.div`
   margin: 20px;
 
   @media (max-width: 768px) {
-    margin: 10px;
+    margin: 2px;
     flex-direction: column;
   }
 `;
@@ -47,7 +48,7 @@ const Seperator = styled.div`
   @media (max-width: 768px) {
     height: 5px;
     width: 75px;
-    margin: 10px;
+    margin: 3px;
   }
 `;
 

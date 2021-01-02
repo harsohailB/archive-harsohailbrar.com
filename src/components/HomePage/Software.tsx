@@ -82,7 +82,7 @@ const Software = () => {
 
   const backEnd: SoftwareColumnProps = {
     title: "Back End",
-    entries: ["Flask", "ExpressJS"],
+    entries: ["Flask", "ExpressJS", "FastAPI"],
   };
 
   const databases: SoftwareColumnProps = {

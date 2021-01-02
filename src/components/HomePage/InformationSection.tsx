@@ -7,12 +7,13 @@ import { InformationTileProps } from "./InformationTile";
 
 const Wrapper = styled.div`
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
+  width: 100%;
+  margin-top: 5%;
+  align-items: center;
+  justify-content: space-around;
 
-  @media (max-width: 768px) {
-    margin-top: 20px;
+  @media (max-width: 1300px) {
+    flex-direction: column;
   }
 `;
 
@@ -23,6 +24,7 @@ const SubSection = styled.div`
 
   @media (max-width: 768px) {
     margin: 10px;
+    flex-direction: column;
   }
 `;
 
@@ -43,8 +45,8 @@ const Seperator = styled.div`
   margin: 20px;
 
   @media (max-width: 768px) {
-    height: 60px;
-    width: 5px;
+    height: 5px;
+    width: 75px;
     margin: 10px;
   }
 `;

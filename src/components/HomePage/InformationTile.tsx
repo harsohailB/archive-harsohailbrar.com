@@ -5,6 +5,8 @@ import Slide from "react-reveal/Slide";
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
 `;
 
 const InfoWrapper = styled.div`
@@ -13,8 +15,8 @@ const InfoWrapper = styled.div`
 `;
 
 const Logo = styled.img`
-  width: 60px;
-  height: 60px;
+  width: 100px;
+  height: 100px;
   object-fit: cover;
   margin: 10px;
 
@@ -31,7 +33,7 @@ const Title = styled.h1`
   font-size: 30px;
 
   @media (max-width: 768px) {
-    font-size: 16px;
+    font-size: 4vw;
   }
 `;
 
@@ -41,18 +43,18 @@ const Subtitle = styled.h3`
   font-size: 18px;
 
   @media (max-width: 768px) {
-    font-size: 12px;
+    font-size: 3vw;
   }
 `;
 
 const Timeline = styled.p`
   margin: 0px !important;
   text-align: left;
-  font-size: 12px;
+  font-size: 14px;
   font-style: italic;
 
   @media (max-width: 768px) {
-    font-size: 8px;
+    font-size: 2vw;
   }
 `;
 

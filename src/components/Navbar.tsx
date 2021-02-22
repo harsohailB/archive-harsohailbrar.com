@@ -80,7 +80,7 @@ const MenuIcon = styled.div`
 
 function Navbar() {
   const resumeLink =
-    "https://drive.google.com/file/d/1onb-J7ChqQOdd_434Jmh0dP-NSiwEhZW/view?usp=sharing";
+    "https://drive.google.com/file/d/1GLFnbML16BdmW_q7gdoGMWVngOQBuBrT/view?usp=sharing";
 
   const [mobileMenuToggled, setMobileMenuToggled] = useState(false);
 
